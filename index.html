@@ -22,7 +22,7 @@
 </head>
 <body>
 
-<section class="hero">
+<section class="hero site-hero">
   <div class="hero-body">
     <div class="container is-max-desktop">
       <div class="columns is-centered">
@@ -69,375 +69,334 @@
   </div>
 </section>
 
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <figure class="hero-figure">
-        <img src="./static/images/figure_1.png"
-             alt="Overview of the ARISTO Hand and fine-grained manipulation behaviors">
+<main>
+  <section class="hero teaser" id="demo" aria-label="ARISTO Hand demo video">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <figure class="media-frame hero-video-frame">
+          <video id="teaser" class="main-demo" autoplay muted loop playsinline controls>
+            <source src="./static/videos/aristo-demo.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="abstract">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered section-intro">
+        <div class="column is-full-width">
+          <h2 class="title is-3 has-text-centered" style="margin-bottom: 2rem;">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Manipulating thin objects and constrained interfaces requires more than a human-like hand shape. The fingertip must align with surfaces, engage small edges, and sense subtle contact forces during interaction. The ARISTO Hand addresses this by combining active distal hyperextension with a rigid-soft fingertip sensing architecture. A sensorized fingernail provides direct force-torque feedback during edge contact, poking, and recessed interactions, while a soft capacitive tactile pad supports stable acquisition and compliant grasping. The tendon-driven finger design enables controlled distal alignment, allowing the fingertip pad to flatten against thin objects and planar surfaces. Together, these capabilities support fine-grained manipulation tasks such as SD card extraction and insertion, penny pickup, and contact-rich teleoperation.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section story-band" id="contributions">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-3" style="margin-bottom: 0.75rem;">Contributions</h2>
+          
+        </div>
+      </div>
+      <div class="columns contribution-grid">
+        <div class="column">
+          <div class="contribution-item">
+            <h3 class="title is-5">Controlled Distal Hyperextension</h3>
+            <p>
+              Active distal hyperextension rotates the fingertip pad into surface alignment, enabling stable contact with thin objects and planar surfaces.
+            </p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="contribution-item">
+            <h3 class="title is-5">Decoupled Rigid-Soft Sensing</h3>
+            <p>
+              A rigid nail-mounted force-torque sensor captures edge contact, while a compliant capacitive pad provides distributed tactile feedback.
+            </p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="contribution-item">
+            <h3 class="title is-5">Contact-Level Validation</h3>
+            <p>
+              Experiments validate how fingertip geometry, distal force sensing, and tactile feedback improve thin-object and constrained-interface manipulation.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="sd-card">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered section-intro">
+        <div class="column is-full-width">
+          <h2 class="title is-3 has-text-centered" style="margin-bottom: 2rem;">SD Card Extraction and Insertion</h2>
+          <div class="content has-text-justified">
+            <p>
+              The SD card task combines several difficult contact modes: recessed slot access, force-controlled push-to-eject interaction, thin-object retrieval, compliant acquisition, and final push-to-lock insertion. ARISTO handles these stages by switching between rigid fingernail interaction, tactile pad acquisition, and active distal hyperextension.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="columns is-multiline is-variable is-4 manipulation-demo-grid">
+        <div class="column is-half">
+          <h4 class="title is-5">Insertion</h4>
+          <video class="demo-video" autoplay muted loop playsinline controls>
+            <source src="./static/videos/sdcardinsert.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <p class="demo-caption">
+            Active distal hyperextension aligns the tactile pad with the card surface for stable acquisition, while the rigid nail completes the push-to-lock insertion.
+          </p>
+        </div>
+
+        <div class="column is-half">
+          <h4 class="title is-5">Extraction</h4>
+          <video class="demo-video" autoplay muted loop playsinline controls>
+            <source src="./static/videos/sdcardextract.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <p class="demo-caption">
+            The rigid fingernail enters the recessed SD card slot and uses force-torque feedback to trigger the push-to-eject mechanism before retrieving the card.
+          </p>
+        </div>
+      </div>
+
+      <figure class="figure-panel wide-figure">
+        <img src="./static/images/sd-card.jpg"
+             alt="Multi-stage SD card extraction and insertion task">
         <figcaption>
-          Overview of the ARISTO Hand and fine-grained manipulation behaviors: a 7-DoF robotic arm mounted hand, distal hyperextension against a planar surface, a close-up of the sensorized fingernail, and secure interaction with a thin object.
+          The full sequence highlights the complementary roles of the rigid fingernail, tactile pad, and active distal hyperextension across extraction and insertion.
         </figcaption>
       </figure>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="section" id="abstract">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            Manipulation of thin objects requires precise contact geometry and reliable force perception, yet many anthropomorphic robotic hands lack the mechanical and sensing capabilities required for such interactions. We present the ARISTO Hand, a tendon-driven robotic hand that integrates active distal hyperextension with a hybrid fingertip sensing architecture combining a rigid nail-mounted force-torque sensor and a soft capacitive tactile array. Active hyperextension enables controlled fingertip engagement beyond the kinematic limits of standard flexion, increasing pull-out force by 2.76x for object thicknesses of 1-20 mm while preserving the nominal grasp capability. The rigid nail-mounted sensor provides reliable force measurements during edge contacts, where proprioceptive force estimation degrades due to Jacobian singularities. We validate the proposed architecture through quantitative force characterization and a multi-stage SD card extraction and insertion task.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section story-band" id="contributions">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Contributions</h2>
-        <p class="content">
-          ARISTO stands for Anthropomorphic, Robotic, Integrated-Sensing, Tendon-Operated.
-        </p>
-      </div>
-    </div>
-    <div class="columns contribution-grid">
-      <div class="column">
-        <div class="contribution-item">
-          <h3 class="title is-5">Distal Hyperextension</h3>
-          <p>
-            A tendon-driven distal hyperextension mechanism actively aligns the fingertip with flat surfaces for stable thin-object manipulation.
-          </p>
-        </div>
-      </div>
-      <div class="column">
-        <div class="contribution-item">
-          <h3 class="title is-5">Rigid-Soft Sensing</h3>
-          <p>
-            A rigid nail-mounted force-torque sensor supports edge interaction while a compliant tactile pad monitors surface contact and slip.
-          </p>
-        </div>
-      </div>
-      <div class="column">
-        <div class="contribution-item">
-          <h3 class="title is-5">Experimental Validation</h3>
-          <p>
-            Force characterization and SD-card manipulation show how fingertip geometry affects force transmission and contact observability.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Why Distal Hyperextension?</h2>
-        <div class="content has-text-justified">
-          <p>
-            Small, thin, and fragile objects expose a gap in many dexterous hands: the hand must align a fingertip with a surface, detect subtle contact transitions, and generate secure engagement without crushing or losing the object. ARISTO addresses this by actively shaping contact at the distal phalanx instead of relying only on standard flexion.
-          </p>
-          <p>
-            The result is a hand that can flatten a fingertip against planar surfaces, place a rigid sensing nail into edge contacts, and still preserve the grasping behaviors expected from an anthropomorphic tendon-driven hand.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="video">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Video</h2>
-        <div class="video-placeholder" role="img" aria-label="Video coming soon">
-          <span class="icon is-large">
-            <i class="fas fa-play-circle"></i>
-          </span>
-          <p>Video coming soon</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="mechanism">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3 has-text-centered">Mechanism Design</h2>
-        <div class="content has-text-justified">
-          <p>
-            ARISTO uses an antagonist tendon path to drive the distal phalanx beyond a neutral extension posture. A dedicated routing path through the PIP joint, idler pulley, PIP motor, and tendon tensioners creates controlled distal hyperextension while maintaining the hand's nominal grasping workspace.
-          </p>
-        </div>
-        <figure class="figure-panel wide-figure">
-          <img src="./static/images/aristo-cad-diagram-web.jpg"
-               alt="CAD diagram of the ARISTO Hand tendon routing and distal hyperextension mechanism">
-          <figcaption>
-            The sensorized distal phalanx combines a rigid nail contact surface with an actuation path that enables hyperextension for surface alignment and thin-object engagement.
-          </figcaption>
-        </figure>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section story-band" id="sensing">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3 has-text-centered">Hybrid Fingertip Sensing</h2>
-        <div class="content has-text-justified">
-          <p>
-            The fingertip separates sensing roles across two contact surfaces. The rigid nail-mounted force-torque sensor measures edge and nail contacts with a direct load path, while the soft NARI-touch sensor captures distributed contact across the finger pad.
-          </p>
-          <p>
-            This hybrid layout is designed for interactions where a single sensing modality is ambiguous: the hand can sense nail contact, pad contact, and transitions between them during fine manipulation.
-          </p>
-        </div>
-        <figure class="figure-panel">
-          <img src="./static/images/finger-sensor.png"
-               alt="ARISTO fingertip with force-torque sensor and NARI-touch sensor">
-          <figcaption>
-            The distal phalanx integrates a force-torque sensor behind the fingernail and a soft capacitive tactile array under the finger pad.
-          </figcaption>
-        </figure>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="experiments">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3 has-text-centered">Force Characterization</h2>
-        <div class="content has-text-justified">
-          <p>
-            The experiments quantify the core premise of the hand: changing distal posture changes the contact mechanics available to the robot. Hyperextension maintains high pull-out force over thin object thicknesses where non-hyperextended postures provide weaker engagement.
-          </p>
-          <p>
-            The paper also reports joint-level NIST metrics and transmission linearity experiments that characterize ARISTO's force-transparent, low-reduction design.
-          </p>
-        </div>
-
-        <div class="metrics-block">
-          <h3 class="title is-4 has-text-centered">NIST Hand Performance Metrics</h3>
-          <div class="table-container">
-            <table class="table is-bordered is-striped is-fullwidth metric-table">
-              <thead>
-                <tr>
-                  <th>Metric</th>
-                  <th>Value</th>
-                  <th>95% CI</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Fingertip Force (Continuous)</td>
-                  <td>4.88 N</td>
-                  <td>-</td>
-                </tr>
-                <tr>
-                  <td>Grasp Strength (80 mm cylinder)</td>
-                  <td>17.81 N</td>
-                  <td>[17.80, 17.82] N</td>
-                </tr>
-                <tr>
-                  <td>Grasp Cycle Time</td>
-                  <td>448.44 ms</td>
-                  <td>[444.80, 452.08] ms</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <h3 class="title is-4 has-text-centered">Comparison Under NIST Protocols</h3>
-          <div class="table-container">
-            <table class="table is-bordered is-striped is-fullwidth metric-table">
-              <thead>
-                <tr>
-                  <th>Hand</th>
-                  <th>Finger Force</th>
-                  <th>Grasp Force</th>
-                  <th>Cycle Time</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>ARISTO</td>
-                  <td>4.88 N</td>
-                  <td>17.81 N</td>
-                  <td>0.448 s</td>
-                </tr>
-                <tr>
-                  <td>Schunk DH</td>
-                  <td>22.11 N</td>
-                  <td>76.11 N</td>
-                  <td>-</td>
-                </tr>
-                <tr>
-                  <td>Robotiq 3F</td>
-                  <td>39.65 N</td>
-                  <td>92.97 N</td>
-                  <td>3.82 s</td>
-                </tr>
-              </tbody>
-            </table>
+  <section class="section story-band" id="hyperextension">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered section-intro">
+        <div class="column is-full-width">
+          <h2 class="title is-3 has-text-centered" style="margin-bottom: 2rem;">Hyperextension for Thin-Object Grasping</h2>
+          <div class="content has-text-justified">
+            <p>
+              Thin objects are difficult to grasp because standard flexion often produces edge contact instead of stable pad contact. ARISTO uses active distal hyperextension to rotate the fingertip pad into alignment with the object surface, increasing contact area and preserving pull-out force.
+            </p>
           </div>
         </div>
+      </div>
 
-        <div class="stat-grid">
+      <figure class="figure-panel">
+        <img src="./static/images/hyperextension.png"
+             alt="Pull-out force versus block thickness with and without hyperextension">
+        <figcaption>
+          Active distal hyperextension improves pull-out force for 1–20 mm objects while retaining at least 98% of the thick-object baseline down to credit-card thickness. Standard flexion retains only 34–40% over the same thin-object range.
+        </figcaption>
+      </figure>
+
+      <div class="columns stat-columns is-centered" style="padding-top: 2rem;">
+        <div class="column">
           <div class="stat-card">
-            <span class="stat-value">R<sup>2</sup> = 0.982 +/- 0.007</span>
-            <span class="stat-label">Mean force-effort linearity across MCP angles</span>
+            <span class="stat-value">2.76x</span>
+            <span class="stat-label">Mean pull-out force increase for 1-20 mm objects</span>
           </div>
+        </div>
+        <div class="column">
           <div class="stat-card">
-            <span class="stat-value">F = 20.13u + 0.71</span>
-            <span class="stat-label">Global effort-to-force fit</span>
+            <span class="stat-value">&gt;= 98%</span>
+            <span class="stat-label">Thick-object baseline retained down to credit-card thickness</span>
           </div>
-          <div class="stat-card">
-            <span class="stat-value">2.14%</span>
-            <span class="stat-label">Force-effort slope variation across configurations</span>
-          </div>
+        </div>
+        <div class="column">
           <div class="stat-card">
             <span class="stat-value">10.13 N</span>
             <span class="stat-label">Peak pull-out force measured without constrained motor gains</span>
           </div>
         </div>
+      </div>
 
-        <figure class="figure-panel">
-          <img src="./static/images/hyperextension.png"
-               alt="Pull-out force versus block thickness with and without hyperextension">
-          <figcaption>
-            Active hyperextension increases pull-out force for thin blocks from 1-20 mm while retaining at least 98% of the thick-object baseline down to credit-card thickness. Standard flexion retains only 34-40% over the same thin-object regime.
-          </figcaption>
-        </figure>
-
-        <div class="content has-text-justified figure-text">
-          <p>
-            ARISTO also validates transmission linearity by comparing motor effort against externally applied force while isolating the PIP joint. Across MCP configurations from -60 degrees to +60 degrees, the effort-to-force relationship remains approximately linear.
-          </p>
-        </div>
-        <figure class="figure-panel">
-          <img src="./static/images/pip-force-effort.png"
-               alt="Force-effort relationship across MCP angles">
-          <figcaption>
-            Transmission linearity validation: motor effort remains strongly correlated with externally measured force across MCP configurations, supporting torque-transparent interaction through flexion and hyperextension.
-          </figcaption>
-        </figure>
+      <div class="content has-text-justified">
+        <p>
+          Pull-out tests were run without sensor feedback to isolate the kinematic effect of distal hyperextension. The ablation study intentionally limited forces to avoid actuator saturation during repeated trials. The 10.13 N measurement shows the higher peak pull-out force available when motor gains are not constrained.
+        </p>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="section story-band">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3 has-text-centered">Nail Contact Observability</h2>
-        <div class="content has-text-justified">
-          <p>
-            Thin-object tasks often begin with a fingernail-like contact, not a whole-pad grasp. ARISTO evaluates both normal and edge loading at the nail to show when the nail-mounted sensor captures clean contact signals and when motor effort becomes less reliable.
-          </p>
-          <p>
-            In low-velocity edge contact, the nail-mounted FT sensor maintains a pre-contact noise floor of 0.0004 Nm, while motor effort can be obscured by stiction. In normal-force tests near straight-finger configurations, motor effort can under-estimate contact force severely; targeting 3.1 N at 15 degrees produced 12.3 N of actual applied force.
-          </p>
+  <section class="section" id="sensing">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered section-intro">
+        <div class="column is-full-width">
+          <h2 class="title is-3 has-text-centered" style="margin-bottom: 2rem;">Fingertip Sensor Design</h2>
+          <div class="content has-text-justified">
+            <p>
+              The fingertip separates rigid edge interaction from compliant surface contact. A rigid nail-mounted force-torque sensor measures contact through the fingernail, while a soft capacitive tactile array measures distributed pressure across the finger pad.
+            </p>
+            <p>
+              This mechanical separation lets ARISTO distinguish nail contact, pad contact, and transitions between the two during fine manipulation.
+            </p>
+          </div>
         </div>
-        <div class="figure-grid">
-          <figure class="figure-panel compact">
-            <img src="./static/images/fingernail-norm.png"
-                 alt="Fingernail normal contact detection">
-            <figcaption>
-              Normal nail contact demonstrates geometry-invariant distal sensing across incidence angles, unlike motor effort near kinematic singularities.
-            </figcaption>
-          </figure>
-          <figure class="figure-panel compact">
+      </div>
+
+      <figure class="figure-panel">
+        <img src="./static/images/finger-sensor.png"
+             alt="ARISTO fingertip with force-torque sensor and NARI-touch sensor">
+        <figcaption>
+          The distal phalanx integrates a nail-mounted force-torque sensor and a soft capacitive tactile array under the finger pad.
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="section" id="sensing-fidelity">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered section-intro">
+        <div class="column is-full-width">
+          <h2 class="title is-3 has-text-centered" style="margin-bottom: 2rem;">Sensing Fidelity</h2>
+          <div class="content has-text-justified">
+            <p>
+              The nail-mounted force-torque sensor and proprioceptive motor effort are compared across two critical conditions: low-velocity edge contact and geometry-dependent normal force detection. Both experiments show that distal sensing is necessary for reliable fine-grained manipulation.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="columns is-variable is-5">
+        <div class="column">
+          <h3 class="title is-5 has-text-centered">Edge Contact Detection</h3>
+          <figure class="figure-panel padded-figure">
             <img src="./static/images/fingernail-edge.png"
-                 alt="Fingernail edge contact detection">
-            <figcaption>
-              Edge contact detection remains clean with the nail-mounted FT sensor at low approach speeds, where motor effort is noisy and velocity-dependent.
-            </figcaption>
+                 alt="Edge contact detection comparing AIDIN FT sensor and motor effort at varying approach velocities">
           </figure>
+          <p class="demo-caption">
+            The nail-mounted FT sensor produces clean, repeatable contact steps across approach velocities. Motor effort is noisy and velocity-dependent. At low speeds (0.05 rad/s), stiction obscures contact events entirely.
+          </p>
+        </div>
+        <div class="column">
+          <h3 class="title is-5 has-text-centered">Geometry-Invariant Force Detection</h3>
+          <figure class="figure-panel padded-figure">
+            <img src="./static/images/fingernail-norm.png"
+                 alt="Normal force detection across joint angles comparing distal FT sensor and motor effort">
+          </figure>
+          <p class="demo-caption">
+            The distal FT sensor tracks the target force within ±0.2 N across all joint angles. Motor effort degrades near straight configurations. At 15°, targeting 3.1 N with proprioception resulted in applying 12.3 N, a ~300% error.
+          </p>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="section">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3 has-text-centered">SD Card Manipulation</h2>
-        <div class="content has-text-justified">
-          <p>
-            The complete system is validated on a multi-stage SD card task: the hand locates and engages the card, extracts it from a constrained slot, transitions into a stable grasp, and reinserts the card. The task brings together the central ingredients of the design: distal hyperextension for access, nail sensing for edge contact, and soft tactile sensing for grasping.
-          </p>
-          <p>
-            The controller uses joint-space impedance control with compliant free-motion and high-stiffness constrained-interaction modes. Rigid fingernail contact is detected with manually selected force-torque thresholds, while the NARI-touch capacitive array monitors incipient slip during grasp acquisition and insertion.
+  <section class="section story-band" id="design">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered section-intro">
+        <div class="column is-full-width">
+          <h2 class="title is-3 has-text-centered" style="margin-bottom: 2rem;">Hand and Finger Design</h2>
+          <div class="content has-text-justified">
+            <p>
+              ARISTO uses a tendon-driven finger architecture designed for controlled distal contact. Fully wrapped antagonistic tendons route around the PIP joint, idler pulley, motor pulley, and tendon tensioners, maintaining an approximately constant effective moment arm across flexion and hyperextension.
+            </p>
+            <p>
+              This routing enables active distal hyperextension while preserving the nominal grasping workspace, allowing the fingertip pad to align with flat surfaces without sacrificing standard flexion-based grasps.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <figure class="figure-panel wide-figure">
+        <img src="./static/images/aristo-cad-diagram-web.jpg"
+             alt="CAD diagram of the ARISTO Hand tendon routing and distal hyperextension mechanism">
+        <figcaption>
+          The ARISTO hand combines a sensorized distal phalanx with fully wrapped antagonistic tendon routing, enabling active distal hyperextension for surface alignment and thin-object engagement.
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="section" id="gallery">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-3" style="margin-bottom: 2rem;">Additional Demos</h2>
+        </div>
+      </div>
+
+      <div class="columns is-variable is-4 manipulation-demo-grid compact-grid">
+        <div class="column is-half">
+          <h4 class="title is-5">Coin pickup</h4>
+          <video class="demo-video" autoplay muted loop playsinline controls>
+            <source src="./static/videos/aristo-coin.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <p class="demo-caption">
+            <strong>Fingernail-assisted penny pickup</strong><br>
+            The rigid fingernails engage the edge of a penny lying flat on the table, enabling pickup of a thin object that is difficult to grasp with soft fingertip contact alone.
           </p>
         </div>
-        <figure class="figure-panel wide-figure">
-          <img src="./static/images/sd-card.jpg"
-               alt="Multi-stage SD card extraction and insertion task">
-          <figcaption>
-            Multi-stage SD card extraction and insertion demonstrates complementary sensing roles: the rigid nail accesses the recessed slot and actuates the eject mechanism, while hyperextension aligns the tactile pad for stable acquisition and insertion.
-          </figcaption>
-        </figure>
+        <div class="column is-half">
+          <h4 class="title is-5">Tool manipulation</h4>
+          <video class="demo-video" autoplay muted loop playsinline controls>
+            <source src="./static/videos/aristo-tool.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <p class="demo-caption">
+            <strong>Tool manipulation with multimeter probe</strong><br>
+            ARISTO picks up a multimeter probe and performs a continuity test on the PLATO Hand, demonstrating precise tool use with the new hand.
+          </p>
+        </div>
+      </div>
+
+      <div class="columns is-centered manipulation-demo-grid compact-grid">
+        <div class="column is-half">
+          <h4 class="title is-5">Teleoperated Jenga</h4>
+          <video class="demo-video" autoplay muted loop playsinline controls>
+            <source src="./static/videos/aristo-jenga.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <p class="demo-caption">
+            <strong>Teleoperated Jenga manipulation</strong><br>
+            ARISTO is teleoperated with an exoskeleton hand while a Lambda haptic device controls the robot arm, enabling contact-rich Jenga manipulation.
+          </p>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="section story-band" id="citation">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3 has-text-centered">BibTeX</h2>
-        <pre class="citation-box"><code>@inproceedings{kim2026aristo,
+  <section class="section story-band" id="citation">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-3 has-text-centered" style="margin-bottom: 2rem;">BibTeX</h2>
+          <pre class="citation-box"><code>@inproceedings{kim2026aristo,
   author    = {Kim, Aaron and Kang, Dong Ho and Helwig, Mark and Seo, Mingyo and Yokoyama, Kazuto and Narita, Tetsuya and Sentis, Luis},
   title     = {ARISTO Hand: Sensing-Driven Distal Hyperextension for Fine-Grained Manipulation},
   booktitle = {IEEE/ASME International Conference on Advanced Intelligent Mechatronics},
   year      = {2026},
   note      = {Accepted},
 }</code></pre>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Acknowledgment</h2>
-        <div class="content">
-          <p>
-            This work was supported in part by Sony Group Corporation.
-          </p>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+</main>
 
 <footer class="footer">
   <div class="container">
     <div class="columns is-centered">
       <div class="column is-8">
         <div class="content footer-note">
+          <p>
+            This work was supported in part by Sony Group Corporation.
+          </p>
           <p>
             This website is licensed under a <a rel="license"
                                                 href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
