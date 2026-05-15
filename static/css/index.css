@@ -3,14 +3,6 @@ body {
   font-family: 'Noto Sans', sans-serif;
 }
 
-.navbar {
-  box-shadow: none;
-}
-
-.navbar-item {
-  font-family: 'Google Sans', sans-serif;
-}
-
 .teaser .hero-body {
   padding-top: 0;
   padding-bottom: 3rem;
@@ -41,8 +33,77 @@ body {
   margin-top: 0.75rem;
 }
 
+.publication-links {
+  margin-top: 1.35rem;
+}
+
+.link-block {
+  display: inline-block;
+  margin: 0.25rem;
+}
+
 .story-band {
   background: #f7f9fa;
+}
+
+.contribution-grid {
+  margin-top: 0.75rem;
+}
+
+.contribution-item {
+  background: #fff;
+  border: 1px solid #e2e8eb;
+  border-radius: 8px;
+  height: 100%;
+  padding: 1.25rem;
+}
+
+.contribution-item .title {
+  margin-bottom: 0.55rem;
+}
+
+.metrics-block {
+  margin: 2rem 0 2.25rem;
+}
+
+.metrics-block .title {
+  margin-bottom: 1rem;
+}
+
+.metric-table th,
+.metric-table td {
+  vertical-align: middle;
+}
+
+.stat-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin: 1.75rem 0 2rem;
+}
+
+.stat-card {
+  background: #fff;
+  border: 1px solid #e2e8eb;
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.stat-value {
+  color: #15202b;
+  display: block;
+  font-family: 'Google Sans', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: 0.4rem;
+}
+
+.stat-label {
+  color: #51606a;
+  display: block;
+  font-size: 0.88rem;
+  line-height: 1.35;
 }
 
 .hero-figure,
@@ -129,9 +190,28 @@ figcaption {
   font-size: 0.75em;
 }
 
+.citation-box {
+  background: #fff;
+  border: 1px solid #d7e0e5;
+  border-radius: 8px;
+  color: #1f2d35;
+  font-size: 0.9rem;
+  overflow-x: auto;
+  padding: 1.25rem;
+  white-space: pre;
+}
+
 @media screen and (max-width: 768px) {
   .publication-title {
     font-size: 2.05rem !important;
+  }
+
+  .publication-links .button {
+    margin-bottom: 0.25rem;
+  }
+
+  .stat-grid {
+    grid-template-columns: 1fr;
   }
 
   .figure-grid {

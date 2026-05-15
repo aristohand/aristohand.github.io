@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="description"
         content="ARISTO Hand: Sensing-Driven Distal Hyperextension for Fine-Grained Manipulation">
-  <meta name="keywords" content="ARISTO Hand, Robotic Hand, Dexterous Manipulation, Tactile Sensing, Distal Hyperextension">
+  <meta name="keywords" content="ARISTO Hand, AIM 2026, IEEE/ASME International Conference on Advanced Intelligent Mechatronics, Robotic Hand, Humanoid Robots, Dexterous Manipulation, Tactile Sensing, Distal Hyperextension">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>ARISTO Hand: Sensing-Driven Distal Hyperextension for Fine-Grained Manipulation</title>
 
@@ -13,6 +13,7 @@
 
   <link rel="stylesheet" href="./static/css/bulma.min.css">
   <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="./static/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -21,25 +22,6 @@
 </head>
 <body>
 
-<nav class="navbar" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
-  <div class="navbar-menu">
-    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-      <a class="navbar-item" href="#abstract">Abstract</a>
-      <a class="navbar-item" href="#video">Video</a>
-      <a class="navbar-item" href="#mechanism">Mechanism</a>
-      <a class="navbar-item" href="#sensing">Sensing</a>
-      <a class="navbar-item" href="#experiments">Experiments</a>
-    </div>
-  </div>
-</nav>
-
 <section class="hero">
   <div class="hero-body">
     <div class="container is-max-desktop">
@@ -47,13 +29,17 @@
         <div class="column has-text-centered">
           <h1 class="title is-1 publication-title">ARISTO Hand: Sensing-Driven Distal Hyperextension for Fine-Grained Manipulation</h1>
 
+          <p class="is-size-5 has-text-weight-semibold" style="margin-bottom: 0.75rem;">
+            Accepted to IEEE/ASME International Conference on Advanced Intelligent Mechatronics (AIM) 2026
+          </p>
+
           <div class="is-size-5 publication-authors">
             <span class="author-block"><a href="https://www.aaronjkim.com/">Aaron Kim</a><sup>1</sup>,</span>
             <span class="author-block"><a href="https://dokkev.github.io">Dong Ho Kang</a><sup>1</sup>,</span>
-            <span class="author-block">Mark Helwig<sup>1</sup>,</span>
+            <span class="author-block"><a href="https://www.linkedin.com/in/mark-l-helwig/">Mark Helwig</a><sup>1</sup>,</span>
             <span class="author-block"><a href="https://mingyoseo.com/">Mingyo Seo</a><sup>1</sup>,</span>
-            <span class="author-block">Kazuto Yokoyama<sup>2</sup>,</span>
-            <span class="author-block">Tetsuya Narita<sup>2</sup>,</span>
+            <span class="author-block"><a href="https://www.linkedin.com/in/kazuto-yokoyama-436a69360/">Kazuto Yokoyama</a><sup>2</sup>,</span>
+            <span class="author-block"><a href="https://www.linkedin.com/in/tetsuya-narita-9a19a215/">Tetsuya Narita</a><sup>2</sup>,</span>
             <span class="author-block"><a href="https://www.ae.utexas.edu/people/faculty/faculty-directory/sentis/">Luis Sentis</a><sup>1</sup></span>
           </div>
 
@@ -64,6 +50,18 @@
 
           <div class="is-size-6 publication-authors contact-line">
             <span class="author-block">Email: <a href="mailto:akim.jinsoo@utexas.edu">akim.jinsoo@utexas.edu</a></span>
+          </div>
+
+          <div class="publication-links">
+            <span class="link-block">
+              <a href="https://arxiv.org/"
+                 class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                  <i class="ai ai-arxiv"></i>
+                </span>
+                <span>arXiv</span>
+              </a>
+            </span>
           </div>
         </div>
       </div>
@@ -100,7 +98,46 @@
   </div>
 </section>
 
-<section class="section story-band">
+<section class="section story-band" id="contributions">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Contributions</h2>
+        <p class="content">
+          ARISTO stands for Anthropomorphic, Robotic, Integrated-Sensing, Tendon-Operated.
+        </p>
+      </div>
+    </div>
+    <div class="columns contribution-grid">
+      <div class="column">
+        <div class="contribution-item">
+          <h3 class="title is-5">Distal Hyperextension</h3>
+          <p>
+            A tendon-driven distal hyperextension mechanism actively aligns the fingertip with flat surfaces for stable thin-object manipulation.
+          </p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="contribution-item">
+          <h3 class="title is-5">Rigid-Soft Sensing</h3>
+          <p>
+            A rigid nail-mounted force-torque sensor supports edge interaction while a compliant tactile pad monitors surface contact and slip.
+          </p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="contribution-item">
+          <h3 class="title is-5">Experimental Validation</h3>
+          <p>
+            Force characterization and SD-card manipulation show how fingertip geometry affects force transmission and contact observability.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
@@ -190,25 +227,114 @@
           <p>
             The experiments quantify the core premise of the hand: changing distal posture changes the contact mechanics available to the robot. Hyperextension maintains high pull-out force over thin object thicknesses where non-hyperextended postures provide weaker engagement.
           </p>
+          <p>
+            The paper also reports joint-level NIST metrics and transmission linearity experiments that characterize ARISTO's force-transparent, low-reduction design.
+          </p>
         </div>
+
+        <div class="metrics-block">
+          <h3 class="title is-4 has-text-centered">NIST Hand Performance Metrics</h3>
+          <div class="table-container">
+            <table class="table is-bordered is-striped is-fullwidth metric-table">
+              <thead>
+                <tr>
+                  <th>Metric</th>
+                  <th>Value</th>
+                  <th>95% CI</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Fingertip Force (Continuous)</td>
+                  <td>4.88 N</td>
+                  <td>-</td>
+                </tr>
+                <tr>
+                  <td>Grasp Strength (80 mm cylinder)</td>
+                  <td>17.81 N</td>
+                  <td>[17.80, 17.82] N</td>
+                </tr>
+                <tr>
+                  <td>Grasp Cycle Time</td>
+                  <td>448.44 ms</td>
+                  <td>[444.80, 452.08] ms</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3 class="title is-4 has-text-centered">Comparison Under NIST Protocols</h3>
+          <div class="table-container">
+            <table class="table is-bordered is-striped is-fullwidth metric-table">
+              <thead>
+                <tr>
+                  <th>Hand</th>
+                  <th>Finger Force</th>
+                  <th>Grasp Force</th>
+                  <th>Cycle Time</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>ARISTO</td>
+                  <td>4.88 N</td>
+                  <td>17.81 N</td>
+                  <td>0.448 s</td>
+                </tr>
+                <tr>
+                  <td>Schunk DH</td>
+                  <td>22.11 N</td>
+                  <td>76.11 N</td>
+                  <td>-</td>
+                </tr>
+                <tr>
+                  <td>Robotiq 3F</td>
+                  <td>39.65 N</td>
+                  <td>92.97 N</td>
+                  <td>3.82 s</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="stat-grid">
+          <div class="stat-card">
+            <span class="stat-value">R<sup>2</sup> = 0.982 +/- 0.007</span>
+            <span class="stat-label">Mean force-effort linearity across MCP angles</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-value">F = 20.13u + 0.71</span>
+            <span class="stat-label">Global effort-to-force fit</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-value">2.14%</span>
+            <span class="stat-label">Force-effort slope variation across configurations</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-value">10.13 N</span>
+            <span class="stat-label">Peak pull-out force measured without constrained motor gains</span>
+          </div>
+        </div>
+
         <figure class="figure-panel">
           <img src="./static/images/hyperextension.png"
                alt="Pull-out force versus block thickness with and without hyperextension">
           <figcaption>
-            Active hyperextension increases pull-out force for thin blocks from 1-20 mm while converging with standard flexion as objects become large enough for conventional grasping.
+            Active hyperextension increases pull-out force for thin blocks from 1-20 mm while retaining at least 98% of the thick-object baseline down to credit-card thickness. Standard flexion retains only 34-40% over the same thin-object regime.
           </figcaption>
         </figure>
 
         <div class="content has-text-justified figure-text">
           <p>
-            ARISTO also compares fingertip force measurements against proprioceptive motor effort. Around difficult PIP configurations, direct nail-mounted sensing better preserves the contact signal that motor effort alone can obscure.
+            ARISTO also validates transmission linearity by comparing motor effort against externally applied force while isolating the PIP joint. Across MCP configurations from -60 degrees to +60 degrees, the effort-to-force relationship remains approximately linear.
           </p>
         </div>
         <figure class="figure-panel">
           <img src="./static/images/pip-force-effort.png"
                alt="Force-effort relationship across MCP angles">
           <figcaption>
-            Force and motor effort remain correlated across MCP angles, but the direct fingertip sensor provides an explicit force measurement at the contact surface.
+            Transmission linearity validation: motor effort remains strongly correlated with externally measured force across MCP configurations, supporting torque-transparent interaction through flexion and hyperextension.
           </figcaption>
         </figure>
       </div>
@@ -225,20 +351,23 @@
           <p>
             Thin-object tasks often begin with a fingernail-like contact, not a whole-pad grasp. ARISTO evaluates both normal and edge loading at the nail to show when the nail-mounted sensor captures clean contact signals and when motor effort becomes less reliable.
           </p>
+          <p>
+            In low-velocity edge contact, the nail-mounted FT sensor maintains a pre-contact noise floor of 0.0004 Nm, while motor effort can be obscured by stiction. In normal-force tests near straight-finger configurations, motor effort can under-estimate contact force severely; targeting 3.1 N at 15 degrees produced 12.3 N of actual applied force.
+          </p>
         </div>
         <div class="figure-grid">
           <figure class="figure-panel compact">
             <img src="./static/images/fingernail-norm.png"
                  alt="Fingernail normal contact detection">
             <figcaption>
-              Normal nail contact produces consistent force readings across approach angles.
+              Normal nail contact demonstrates geometry-invariant distal sensing across incidence angles, unlike motor effort near kinematic singularities.
             </figcaption>
           </figure>
           <figure class="figure-panel compact">
             <img src="./static/images/fingernail-edge.png"
                  alt="Fingernail edge contact detection">
             <figcaption>
-              Edge contact highlights the value of the nail-mounted sensor where proprioceptive estimates are noisy or configuration-dependent.
+              Edge contact detection remains clean with the nail-mounted FT sensor at low approach speeds, where motor effort is noisy and velocity-dependent.
             </figcaption>
           </figure>
         </div>
@@ -256,14 +385,49 @@
           <p>
             The complete system is validated on a multi-stage SD card task: the hand locates and engages the card, extracts it from a constrained slot, transitions into a stable grasp, and reinserts the card. The task brings together the central ingredients of the design: distal hyperextension for access, nail sensing for edge contact, and soft tactile sensing for grasping.
           </p>
+          <p>
+            The controller uses joint-space impedance control with compliant free-motion and high-stiffness constrained-interaction modes. Rigid fingernail contact is detected with manually selected force-torque thresholds, while the NARI-touch capacitive array monitors incipient slip during grasp acquisition and insertion.
+          </p>
         </div>
         <figure class="figure-panel wide-figure">
           <img src="./static/images/sd-card.jpg"
                alt="Multi-stage SD card extraction and insertion task">
           <figcaption>
-            Multi-stage SD card extraction and insertion demonstrates fine-grained contact sequencing with a thin object in a constrained fixture.
+            Multi-stage SD card extraction and insertion demonstrates complementary sensing roles: the rigid nail accesses the recessed slot and actuates the eject mechanism, while hyperextension aligns the tactile pad for stable acquisition and insertion.
           </figcaption>
         </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section story-band" id="citation">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3 has-text-centered">BibTeX</h2>
+        <pre class="citation-box"><code>@inproceedings{kim2026aristo,
+  author    = {Kim, Aaron and Kang, Dong Ho and Helwig, Mark and Seo, Mingyo and Yokoyama, Kazuto and Narita, Tetsuya and Sentis, Luis},
+  title     = {ARISTO Hand: Sensing-Driven Distal Hyperextension for Fine-Grained Manipulation},
+  booktitle = {IEEE/ASME International Conference on Advanced Intelligent Mechatronics},
+  year      = {2026},
+  note      = {Accepted},
+}</code></pre>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Acknowledgment</h2>
+        <div class="content">
+          <p>
+            This work was supported in part by Sony Group Corporation.
+          </p>
+        </div>
       </div>
     </div>
   </div>
